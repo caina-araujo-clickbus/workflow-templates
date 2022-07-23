@@ -1,0 +1,12 @@
+name: Test workflow
+
+on: workflow_call
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - run: echo 'Executando test'
